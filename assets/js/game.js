@@ -19,12 +19,25 @@ enemyHealth = enemyHealth - playerAttack;
 console.log(
     playerName + "attacked" + enemyName + ". " + enemyName + "now has" + enemyHealth + "health remaining."
 )
+if (enemyHealth <= 0) {
+    window.alert(enemyName + " has died!");
+}
+else {
+    window.alert(enemyName + " still has " + enemyHealth + " health left.");
+}
     //Subtract the value of 'enemyHealth' from the value of 'enemyAttack' fro the value of 'playerHealth' and use that to update the value in the 'playerHealth' variable
 playerHealth = playerHealth - enemyAttack;
     //Log a resutling message to the console so we kow that it worked.
     console.log(
         enemyName + "attacked" + playerName + ". " + playerName + "now has" + playerHealth + "healthremaining."
     );
+
+if (playerHealth <= 0) {
+    window.alert(playerName + " has died!");
+}
+else {
+    window.alert(playerName + " still has " + playerHealth + " health left.");
+}
 };
 
 fight();
