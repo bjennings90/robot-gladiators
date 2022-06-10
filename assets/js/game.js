@@ -72,6 +72,7 @@ var fight = function(enemy) {
 
 //function to start a new game
 var startGame = function () {
+
     //reset player stats
     playerInfo.reset();
 
@@ -164,12 +165,24 @@ var shop = function () {
             break;
     }
 };
+
+// function set name
+var getPlayerName = function() {
+    var name = "";
+
+    while (name === "" || name === null) {
+        name = prompt("What is your robot's name?");
+    }
+
+    console.log("Your robot's name is " + name);
+    return name;
+};
 /* end game functions */
 
 /* game information/variables */
 //player information
 var playerInfo = {
-    name: window.prompt("What is your robot's name?"),
+    name: getPlayerName(),
     health: 100,
     attack: 10,
     money: 10,
